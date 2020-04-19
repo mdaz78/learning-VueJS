@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="app">
-    <button v-on:click="increase(2)">Click Me</button>
+    <button v-on:click="increase(2, $event)">Click Me</button>
     <p>{{counter}}</p>
     <p v-on:mousemove="updateCoordinates" style="border: 1px solid red">Coordinates: {{ x }},{{ y }}</p>
 </div>
