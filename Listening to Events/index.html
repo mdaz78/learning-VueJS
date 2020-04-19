@@ -9,7 +9,16 @@
 <div id="app">
     <button v-on:click="increase(2, $event)">Click Me</button>
     <p>{{counter}}</p>
-    <p v-on:mousemove="updateCoordinates" style="border: 1px solid red">Coordinates: {{ x }},{{ y }}</p>
+    <p v-on:mousemove="updateCoordinates">
+        <!--
+            the below given code is equivalent of adding
+            event.stopPropagation
+            and event.preventDefault
+        -->
+        Coordinates: {{ x }},{{ y }} - <span v-on:mousemove.stop.prevent>DEAD SPOT</span>
+    </p>
+
+    <input type="text" v-on:keyup.enter.space="alertMe($event)">
 </div>
 
 <script src="./app.js"></script>
