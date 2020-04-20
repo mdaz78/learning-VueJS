@@ -9,7 +9,7 @@
 <div id="app">
     <input type="text" v-on:input="changeTitle">
     <p v-once>{{ title }}</p>
-    <p>{{ sayHello() }}<a v-bind:href="link">{{ googleText }}</a></p>
+    <p>{{ sayHello() }}<a :href="link">{{ googleText }}</a></p>
     <hr>
     <p v-html="finishedLink"></p>
 </div>
