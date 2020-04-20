@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./index.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div
+            :class="{'red': attachRed}"
+            @click="attachRed = !attachRed"
+            class="demo"
+    >
+
+    </div>
+    <div
+            :class="{'green': attachGreen}"
+            @click="attachGreen = !attachGreen"
+            class="demo"
+    >
+    </div>
+    <div :class="{'blue': attachBlue}"
+         @click="attachBlue = !attachBlue"
+         class="demo"
+    >
+
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
