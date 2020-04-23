@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-if</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="show">You can see me!</p>
+    <p v-else>Now you see me!</p>
+    <p>Do you also see me?</p>
+    <button @click="show = !show">Show</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
