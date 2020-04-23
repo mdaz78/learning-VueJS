@@ -8,8 +8,9 @@
 <body>
 <div id="app">
     <ul>
-        <li v-for="( ingredient, i ) in ingredients">{{ingredient}} ({{i}})</li>
+        <li v-for="( ingredient, i ) in ingredients" :key="ingredient">{{ingredient}} ({{i}})</li>
     </ul>
+    <button @click="ingredients.push('spices')">Add New</button>
 
     <hr>
     <ul>
@@ -18,6 +19,9 @@
         </li>
     </ul>
     <hr>
+
+    <!-- Loop thorough 1 to 10   -->
+    <div v-for="n in 10">{{n}}</div>
 
     <template v-for="(ingredient, index) in ingredients">
         <h5>{{ ingredient }}</h5>
