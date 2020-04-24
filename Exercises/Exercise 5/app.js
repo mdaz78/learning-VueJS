@@ -11,6 +11,7 @@ new Vue({
       name: 'TESTOBJECT', 
       id: 10,
       data: [1.67, 1.33, 0.98, 2.21]
-    }
+    },
+    show: true
   }
 });
