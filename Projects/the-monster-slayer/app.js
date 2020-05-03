@@ -6,29 +6,33 @@ new Vue({
     gameIsRunning: false,
   },
   methods: {
-    startGame: function() {
+    startGame: function () {
       this.gameIsRunning = true;
       this.playerHealth = 100;
       this.monsterHealth = 100;
     },
-    attack: function() {
+    attack: function () {
       this.monsterHealth -= this.calculateDamage(3, 10)
       if (this.checkWin()) {
         return;
       }
-      this.playerHealth -= this.calculateDamage(5, 12)
-      this.checkWin();
+      this.monsterAttacks()
     },
     specialAttack: function () {
-      console.log("specialAttack")
+      this.monsterHealth -= this.calculateDamage(10, 20);
+      if (this.checkWin()) {
+        return;
+      }
+
+      this.monsterAttacks();
     },
     heal: function () {
-      console.log("heal")
+     
     },
     giveUp: function () {
       console.log("giveUp")
     },
-    calculateDamage: function(min, max) {
+    calculateDamage: function (min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min)
     },
     checkWin: function () {
@@ -48,6 +52,11 @@ new Vue({
         return true;
       }
       return false;
+    },
+    monsterAttacks: function () {
+      this.playerHealth -= this.calculateDamage(5, 12);
+      this.checkWin()
     }
-  }
+  },
+
 })
