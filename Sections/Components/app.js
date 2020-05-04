@@ -1,4 +1,4 @@
-Vue.component("my-cmp", {
+const component = {
   data: function() {
     return {
       status: "Critical"
@@ -10,8 +10,15 @@ Vue.component("my-cmp", {
       this.status = "Normal";
     }
   }
-});
+};
 
 new Vue({
-  el: "#app"
+  el: "#app",
+  components: {
+    'my-cmp': component
+  }
+})
+
+new Vue({
+  el: '#app2'
 })
