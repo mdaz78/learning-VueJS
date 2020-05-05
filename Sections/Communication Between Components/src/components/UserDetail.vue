@@ -3,6 +3,8 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p>User Name: {{ switchName() }}</p>
+        <p>Age: {{ age }}</p>
+
         <!--    <button @click="resetName">Reset Name</button>-->
         <button @click="resetFunction()">Reset Name</button>
     </div>
@@ -17,6 +19,10 @@
       },
       resetFunction: {
         type: Function,
+        required: true
+      },
+      age: {
+        type: Number,
         required: true
       }
     },
