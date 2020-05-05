@@ -4,7 +4,7 @@
       <div class="col-xs-12">
         <myQuote>
           <h2 slot="title">Quote</h2>
-          <p slot="content">A Wonderful Quote!</p>
+          <p>A Wonderful Quote!</p>
         </myQuote>
       </div>
     </div>

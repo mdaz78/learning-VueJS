@@ -1,7 +1,10 @@
 <template>
     <div>
-        <slot name="title"></slot>
-        <slot name="content"></slot>
+        <div class="title">
+            <slot name="title"></slot>
+            <span style="color: #cccccc"><slot name="subtitle">The Subtitle</slot></span>
+        </div>
+        <slot></slot>
     </div>
 </template>
 
