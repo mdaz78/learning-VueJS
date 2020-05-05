@@ -3,6 +3,7 @@
     <h3>You may view the User Details here</h3>
     <p>Many Details</p>
     <p>User Name: {{ switchName() }}</p>
+    <button @click="resetName">Reset Name</button>
   </div>
 </template>
 
@@ -11,7 +12,6 @@ export default {
   props: {
     name: {
       type: String,
-      default: "Max",
       required: true // You don't use default if you are using required
     }
   },
@@ -21,6 +21,10 @@ export default {
         .split("")
         .reverse()
         .join("");
+    },
+    resetName() {
+      let name = 'zafar'
+      this.$emit("resetName", name)
     }
   }
 };
