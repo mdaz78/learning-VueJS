@@ -15,6 +15,9 @@
         <transition name="fade" appear>
           <div class="alert alert-info" v-if="show">This is some info</div>
         </transition>
+        <transition enter-active-class="animated bounce" leave-active-class="animated shake" appear>
+          <div class="alert alert-info" v-if="show">This is some info</div>
+        </transition>
       </div>
     </div>
   </div>
