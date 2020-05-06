@@ -7,11 +7,17 @@ Vue.directive("highlight", {
     console.log(el);
     console.log(binding);
     console.log(vnode);
-    if (binding.arg == 'background') {
-      el.style.backgroundColor = binding.value;
-    } else {
-      el.style.color = binding.value;
+    let delay = 0;
+    if (binding.modifiers["delay"]) {
+      delay = 5000;
     }
+    setTimeout(() => {
+      if (binding.arg == "background") {
+        el.style.backgroundColor = binding.value;
+      } else {
+        el.style.color = binding.value;
+      }
+    }, delay);
   }
 });
 
