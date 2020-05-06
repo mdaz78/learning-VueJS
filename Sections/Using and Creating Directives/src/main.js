@@ -7,7 +7,11 @@ Vue.directive("highlight", {
     console.log(el);
     console.log(binding);
     console.log(vnode);
-    el.style.backgroundColor = binding.value;
+    if (binding.arg == 'background') {
+      el.style.backgroundColor = binding.value;
+    } else {
+      el.style.color = binding.value;
+    }
   }
 });
 
